@@ -18,7 +18,7 @@ def main():
         output.addPage(input_pdf.getPage(nr_page))
         output_dir = REL_OUTPUT_DIR / file_name
         output_dir.mkdir(parents=True, exist_ok=True)
-        output_file = output_dir / f"document-page{nr_page}.pdf"
+        output_file = output_dir / f"document-page{nr_page+1}.pdf"
         with open(output_file, "wb") as outputStream:
             output.write(outputStream)
 
